@@ -1,3 +1,5 @@
 export const home = (req, res) => {
-    res.send('Hello World desde Controller')
+    res.render('inicio', {
+        title: 'Home Page'
+    })
 } 

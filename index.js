@@ -6,10 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 //Motor de Plantilla
-app.engine('handlebars', engine({
+app.engine('hbs', engine({
     extname: '.hbs',
 }));
-app.set('view engine', 'handlebars');
+app.set('view engine', 'hbs');
 app.set('views', './views');
 
 
