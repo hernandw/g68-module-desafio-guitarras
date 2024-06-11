@@ -1,0 +1,240 @@
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 1rem 2rem;
+  }
+  
+  header .logo img {
+    height: 80px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    margin-left: 1.5rem;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .title {
+    text-align: center;
+    margin: 1rem;
+    
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .banner {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .banner img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .banner h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+  
+  .banner .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .featured-products, .testimonials {
+    padding-bottom: 6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .product-grid, .testimonial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rem 1rem;
+    margin-bottom: 100px;
+  }
+  
+  .product-card, .testimonial-card {
+    background-color: #f9f9f9;
+    width: calc(25% - 1rem);
+    height: 260px;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .product-card img, .testimonial-card img {
+    max-width: 100%;
+    /* height: auto; */
+    max-height: 250px;
+  }
+  
+  .product-card h3, .testimonial-card h4 {
+    margin: 0.5rem 0;
+  }
+  
+  .product-card p, .testimonial-card p {
+    margin: 0.5rem 0;
+  }
+  
+  .product-card .btn, .testimonial-card .btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  /* Estilos para el formulario de agregar guitarras */
+.guitar-form {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .guitar-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los campos de entrada */
+  .guitar-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .guitar-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .guitar-form input[type="text"],
+  .guitar-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .guitar-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para el botón de submit */
+  .guitar-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .guitar-form .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  footer {
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  /* Estilos para la página de detalles del producto */
+
+.product-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.product-image {
+  flex: 1;
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.product-info h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-info strong {
+  font-weight: bold;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .product-details {
+    flex-direction: column;
+  }
+  
+  .product-image,
+  .product-info {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+}
+  
+  /* Estilos para el filtro */
+
+  .filter-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 30px;
+    margin: 30px auto;
+  }
