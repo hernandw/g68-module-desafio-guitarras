@@ -1,5 +1,5 @@
 import express from 'express';
-import { home, about, contact, addGuitarForm, addGuitar } from '../controller/controller.js';
+import { home, about, contact, addGuitarForm, addGuitar, getGuitars } from '../controller/controller.js';
 const router = express.Router()
 
 router.get('/', home)
@@ -11,6 +11,8 @@ router.get('/contact', contact)
 router.get('/addGuitar', addGuitarForm)
 
 router.post('/guitars/add', addGuitar)
+
+router.get('/guitars', getGuitars)
 
 router.get('*', (req, res)=>{
 res.send('404 - page not found')

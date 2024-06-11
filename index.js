@@ -20,7 +20,11 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 ;
-app.use(expressFileUpload());
+app.use(expressFileUpload({
+    limits: { fileSize: 900000 },
+    responseOnLimit: 'El archivo es demasiado grande',
+    abortOnLimit: true
+}));
 
 //Routes
 app.use('/', routes)

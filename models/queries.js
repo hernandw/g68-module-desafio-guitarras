@@ -42,3 +42,21 @@ export const addGuitarQuery = async (
       console.log("Error code: ", error.code + " Error message: ", error.message);
     }
   };
+
+  export const getGuitarsQuery = async () => {
+    try {
+      const sql = {
+        text: "SELECT * FROM guitars",
+      };
+  
+      const response = await pool.query(sql);
+      if (response.rowCount > 0) {
+        
+        return response.rows;
+      } else {
+        return new Error("Error getting guitars");
+      }
+    } catch (error) {
+      res.status(500).send(error.message);
+    }
+  };

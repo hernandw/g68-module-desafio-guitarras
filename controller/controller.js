@@ -1,9 +1,10 @@
-import { addGuitarQuery } from "../models/queries.js";
+import { addGuitarQuery, getGuitarsQuery } from "../models/queries.js";
 import { v4 as uuidv4 } from "uuid";
 
-export const home = (req, res) => {
+export const home = async(req, res) => {
     res.render('inicio', {
-        title: 'Home Page'
+        title: 'Home Page',
+        products: await getGuitarsQuery()
     })
 } 
 
@@ -49,6 +50,16 @@ export const addGuitar = async (req, res) => {
         imageUrl
       );
       res.status(201).redirect("/");
+    } catch (error) {
+      res.status(500).send(error.message);
+    }
+  };
+
+  export const getGuitars = async (req, res) => {
+    try {
+      const response = await getGuitarsQuery();
+      console.log(response);
+      res.status(200).json(response);
     } catch (error) {
       res.status(500).send(error.message);
     }
