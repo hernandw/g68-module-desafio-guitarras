@@ -1,0 +1,46 @@
+<main>
+    <h1 class="title">Add a New Guitar</h1>
+    <form action="/guitars/add" method="POST" enctype="multipart/form-data" class="guitar-form">
+      <div class="form-group">
+        <label for="name">Guitar Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand" required>
+      </div>
+      <div class="form-group">
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required>
+      </div>
+      <div class="form-group">
+        <label for="body">Body Type:</label>
+        <input type="text" id="body" name="body" required>
+      </div>
+      <div class="form-group">
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+      </div>
+      <div class="form-group">
+        <label for="pickups">Pickups:</label>
+        <input type="text" id="pickups" name="pickups">
+      </div>
+      <div class="form-group">
+        <label for="string">Number of Strings:</label>
+        <input type="number" id="string" name="string" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+      </div>
+      <div class="form-group">
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" required>
+      </div>
+      <button type="submit" class="btn">Add Guitar</button>
+    </form>
+  </main>
