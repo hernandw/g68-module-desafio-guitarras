@@ -1,4 +1,4 @@
-import { addGuitarQuery, getGuitarsQuery } from "../models/queries.js";
+import { addGuitarQuery, getGuitarsQuery, getGuitarByIdQuery  } from "../models/queries.js";
 import { v4 as uuidv4 } from "uuid";
 
 export const home = async(req, res) => {
@@ -60,6 +60,32 @@ export const addGuitar = async (req, res) => {
       const response = await getGuitarsQuery();
       console.log(response);
       res.status(200).json(response);
+    } catch (error) {
+      res.status(500).send(error.message);
+    }
+  };
+
+  export const getGuitarById = async (req, res) => {
+    try {
+      const guitarId = req.params.id;
+      res.render('product',{
+        title: 'Details Page',
+        guitar: await getGuitarByIdQuery(guitarId)
+      })
+      
+    } catch (error) {
+      res.status(500).send(error.message);
+    }
+  };
+
+  export const updateGuitarForm = async (req, res) => {
+    try {
+      const guitarId = req.params.id;
+      const guitar = await getGuitarByIdQuery(guitarId);
+      res.render('updateGuitar', {
+        title: 'Update Guitar Form',
+        guitar
+      });
     } catch (error) {
       res.status(500).send(error.message);
     }

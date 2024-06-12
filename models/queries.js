@@ -57,6 +57,23 @@ export const addGuitarQuery = async (
         return new Error("Error getting guitars");
       }
     } catch (error) {
-      res.status(500).send(error.message);
+      console.log("Error code: ", error.code + " Error message: ", error.message);
+    }
+  };
+
+  export const getGuitarByIdQuery = async (id) => {
+    try {
+      const sql = {
+        text: "SELECT * FROM guitars WHERE id = $1",
+        values: [id],
+      };
+      const response = await pool.query(sql);
+      if (response.rowCount > 0) {
+        return response.rows[0];
+      } else {
+        return new Error("Error getting guitar");
+      }
+    } catch (error) {
+      console.log("Error code: ", error.code + " Error message: ", error.message);
     }
   };
