@@ -77,3 +77,27 @@ export const addGuitarQuery = async (
       console.log("Error code: ", error.code + " Error message: ", error.message);
     }
   };
+
+  export const filtrosBodyQuery = async () => {
+    const sql = {
+      text: "SELECT DISTINCT body FROM guitars",
+    };
+    const body = await pool.query(sql);
+    if (body.rowCount > 0) {
+      return body.rows;
+    } else {
+      return new Error("Error getting brands");
+    }
+  };
+
+  export const filtrosBrandsQuery = async () => {
+    const sql = {
+      text: "SELECT DISTINCT brand FROM guitars",
+    };
+    const brands = await pool.query(sql);
+    if (brands.rowCount > 0) {
+      return brands.rows;
+    } else {
+      return new Error("Error getting brands");
+    }
+  };

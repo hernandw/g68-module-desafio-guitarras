@@ -5,6 +5,54 @@
       <h1>Discover Your Sound with Tone Master</h1>
       <a href="/guitars" class="btn">Shop Now</a>
     </section>
+
+<section class="container">
+       <div class="filter-controls">
+      <form class="form-filter" id="filter-form" method="GET" action="/guitars">
+        
+
+        <div>
+          <label for="bodyFilter">Filter by Body Type:</label>
+        <select id="bodyFilter" name="bodyFilter">
+          <option value="">All</option>
+          {{#each bodyTypes}}
+          <option value="{{this.body}}">{{this.body}}</option>
+          {{/each}}
+        </select>
+        </div>
+
+        <div>
+          <label for="brandFilter">Filter by Brand:</label>
+        <select id="brandFilter" name="brandFilter">
+          <option value="">All</option>
+          {{#each brands}}
+          <option value="{{this.brand}}">{{this.brand}}</option>
+          {{/each}}
+        </select>
+        </div>
+
+        <div>
+          <label for="sortOrder">Sort by:</label>
+        <select id="sortOrder" name="sortOrder">
+          <option value="" disabled selected>Price</option>
+          <option value="asc">menor a mayor</option>
+          <option value="desc">mayor a menor</option>
+        </select>
+        </div>
+
+        <div>
+          <label for="pageSize">Show:</label>
+        <select id="pageSize" name="pageSize">
+          <option value="" disabled selected>Productos x Pagina</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+        </select>
+        </div>
+      </form>
+    </div>
+    </section>
+
     <section class="featured-products">
       <h2>Featured Products</h2>
       <div class="product-grid">

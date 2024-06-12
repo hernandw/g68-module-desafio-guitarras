@@ -230,11 +230,26 @@
   
   /* Estilos para el filtro */
 
-  .filter-controls {
+  .form-filter {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
     margin-bottom: 20px;
-    gap: 30px;
-    margin: 30px auto;
+  }
+  
+  .filter-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+  }
+  
+  .filter-controls label, .filter-controls select {
+      display: inline-block;
+  }
+  
+  .filter-controls select {
+      padding: 5px;
   }

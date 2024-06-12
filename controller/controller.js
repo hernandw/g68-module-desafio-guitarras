@@ -1,10 +1,14 @@
-import { addGuitarQuery, getGuitarsQuery, getGuitarByIdQuery  } from "../models/queries.js";
+import { addGuitarQuery, getGuitarsQuery, getGuitarByIdQuery, filtrosBrandsQuery,
+  filtrosBodyQuery   } from "../models/queries.js";
 import { v4 as uuidv4 } from "uuid";
 
 export const home = async(req, res) => {
     res.render('inicio', {
         title: 'Home Page',
-        products: await getGuitarsQuery()
+        products: await getGuitarsQuery(),
+        brands: await filtrosBrandsQuery(),
+        bodyTypes: await filtrosBodyQuery()
+        
     })
 } 
 
